@@ -1,4 +1,4 @@
-@import 'styles/variables';
+@import "styles/variables";
 body {
   font-family: "Inter", sans-serif;
 }
@@ -8,34 +8,50 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin: 0;
 }
-
 
 // custom classes
 
 .custom-input {
-  border:none;
-  padding:$sp-md;
+  border: none;
+  padding: $sp-md;
   outline: none;
-  border:1px solid $grey-200;
+  border: 1px solid $grey-200;
   input::placeholder {
     color: $grey-200;
+  }
 }
 
-}
-
-
+// buttons
 .custom-button {
-  border:none;
-  background:$grey-900;
-  color:$white;
+  border: none;
+  background: $grey-900;
+  color: $white;
+  cursor: pointer;
+  transition:all 0.2s ease;
+  &:hover {
+    background-color: lighten($grey-900, 10%);
+  }
 }
 
 .custom-button-xl {
   @extend .custom-button;
-  padding:$sp-md $sp-xl;
+  padding: $sp-md $sp-xl;
   border-radius: $radius-lg;
-  height:60px;
+  height: 60px;
+}
+
+// helpers
+.error-text {
+  color: $error;
+  font-size: 0.8rem;
+  margin-top: $sp-sm;
+  font-weight: 500;
+}
+
+.error-border {
+  border: 1px solid $error;
 }
