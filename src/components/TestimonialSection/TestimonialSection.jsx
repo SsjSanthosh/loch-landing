@@ -22,15 +22,21 @@ const TestimonialSection = () => {
     });
     slider.addEventListener("mouseup", () => {
       isDown = false;
-      slider.classList.remove("active");
     });
     slider.addEventListener("mousemove", (e) => {
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX); //scroll-fast
+      const walk = x - startX; //scroll-fast
       slider.scrollLeft = scrollLeft - walk;
     });
+
+    return () => {
+      slider.removeEventListener("mousedown", {});
+      slider.removeEventListener("mouseup", {});
+      slider.removeEventListener("mousemove", {});
+      slider.removeEventListener("mouseleave", {});
+    };
   }, []);
   return (
     <section className={styles["testimonials-section"]}>

@@ -42,12 +42,25 @@ span {
 
 .custom-input {
   border: none;
-  padding: $sp-md;
+
   outline: none;
   border: 1px solid $grey-200;
+  border-radius: $radius-lg;
+  width: 100%;
   input::placeholder {
     color: $grey-200;
   }
+}
+
+.custom-input-md {
+  @extend .custom-input;
+  padding: $sp-sm;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.custom-input-xl {
+  padding: $sp-md;
 }
 
 // buttons
@@ -62,6 +75,12 @@ span {
   }
 }
 
+.no-style-button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: 600;
+  cursor: pointer;
+}
 .custom-button-xl {
   @extend .custom-button;
   padding: $sp-md $sp-xl;
@@ -81,6 +100,12 @@ span {
   border: 1px solid $error;
 }
 
+// input customizers
+input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  padding:$sp-xs;
+}
 
 // scrollbars
 /* Firefox */

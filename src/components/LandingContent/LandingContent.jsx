@@ -9,6 +9,7 @@ import { TESTIMONIALS } from "utils/constants";
 import TestimonialCard from "components/TestimonialCard";
 import { nanoid } from "nanoid";
 import TestimonialSection from "components/TestimonialSection";
+import NotificationCards from "components/NotificationCards";
 
 const LandingContent = () => {
   return (
@@ -25,7 +26,9 @@ const LandingContent = () => {
             on-chain or when a dormant whale you care about becomes active.
           </h4>
         </div>
-        <div className={styles["notification-section-cards"]}></div>
+        <div className={styles["notification-section-cards"]}>
+          <NotificationCards />
+        </div>
       </section>
       {/* cohort section */}
       <section className={styles["cohorts-section"]}>

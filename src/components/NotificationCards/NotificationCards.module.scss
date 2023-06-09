@@ -1,0 +1,134 @@
+@import "styles/variables";
+.container {
+    display: flex;
+    column-gap: $sp-xl;
+}
+.cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: $sp-xl;
+  animation: loop 15s linear infinite;
+}
+.cards-2 {
+    animation-delay:15s;
+}
+.card {
+  width: 250px;
+  height: 160px;
+  background-color: $white;
+  border-radius: $radius-xl;
+  padding: $sp-lg;
+  font-weight: 600;
+  color: $grey-900;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 27.5%,
+      rgba(22, 93, 255, 0.162) 157.71%
+    ),
+    #ffffff;
+  box-shadow: 0px 2.8px 7px rgba(0, 0, 0, 0.04),
+    0px 0.7px 0.7px rgba(0, 0, 0, 0.04);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $sp-lg;
+  p,
+  div,
+  span {
+    font-size: 1.2rem;
+  }
+}
+
+.notification-icon {
+  height: 28px;
+  width: 28px;
+  position: relative;
+}
+
+.notification-content {
+  input {
+    margin-top: $sp-lg;
+    width: 160px;
+  }
+}
+
+// custom card styles
+.card-two {
+  margin-top: $sp-xxxl;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  h5 {
+    margin-bottom: $sp-md;
+  }
+}
+
+.card-three {
+  margin-top: $sp-xl;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  row-gap: $sp-sm;
+}
+// custom select
+.select {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+}
+.select select {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: $sp-sm;
+  outline: 0;
+  border: 0px solid #000000;
+  border-radius: 5px;
+  background: rgba(229, 229, 230, 0.5);
+  color: $grey-900;
+  font-weight: 600;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.select select::-ms-expand {
+  display: none;
+}
+.select select:hover,
+.select select:focus {
+  color: #000000;
+  background: #cccccc;
+}
+.select select:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+.select_arrow {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0px 5px;
+  border-color: #7b7b7b transparent transparent transparent;
+}
+.select select:hover ~ .select_arrow,
+.select select:focus ~ .select_arrow {
+  border-top-color: #000000;
+}
+.select select:disabled ~ .select_arrow {
+  border-top-color: #cccccc;
+}
+
+// animations
+@keyframes loop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
