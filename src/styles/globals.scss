@@ -1,0 +1,41 @@
+@import 'styles/variables';
+body {
+  font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+
+// custom classes
+
+.custom-input {
+  border:none;
+  padding:$sp-md;
+  outline: none;
+  border:1px solid $grey-200;
+  input::placeholder {
+    color: $grey-200;
+}
+
+}
+
+
+.custom-button {
+  border:none;
+  background:$grey-900;
+  color:$white;
+}
+
+.custom-button-xl {
+  @extend .custom-button;
+  padding:$sp-md $sp-xl;
+  border-radius: $radius-lg;
+  height:60px;
+}

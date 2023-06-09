@@ -1,0 +1,32 @@
+@import "styles/variables";
+.wrapper {
+  display: grid;
+  width: 100vw;
+  min-height: 100vh;
+  grid-template-columns: 5.5fr 4.5fr;
+}
+
+.landing-wrapper {
+  //   background: radial-gradient(
+  //     79.84% 79.84% at 32.27% 80.27%,
+  //     rgba(31, 169, 17, 0.810119) 25.21%,
+  //     #2f15d0 54.58%,
+  //     $grey-900 100%
+  //   );
+  //   background-size: 100%;
+  //   background-position:right;
+  background-color: slateblue;
+}
+
+.form-wrapper {
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  box-shadow: 0px 8px 22px -6px rgba(24, 39, 75, 0.12), 0px 14px 64px -4px rgba(24, 39, 75, 0.12);
+}
+
+.form-container {
+  width: 50%;
+  max-width: 360px;
+  margin:0 auto;
+}

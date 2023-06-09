@@ -1,0 +1,27 @@
+@import "styles/variables";
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 28px;
+  h1 {
+    color: $grey-300;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+  }
+  .input {
+    padding: $sp-md $sp-lg;
+    border-radius: $radius-lg;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04),
+      0px 1px 1px rgba(0, 0, 0, 0.04);
+    width: 90%;
+    color: $grey-900;
+  }
+  p {
+    color: $grey-900;
+    font-weight: 500;
+    line-height: 120%;
+  }
+}
