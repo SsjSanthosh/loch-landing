@@ -1,6 +1,29 @@
 @import "styles/variables";
 body {
   font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+p,
+span,
+div {
+  font-size: 1.6rem;
 }
 
 h1,
@@ -9,8 +32,10 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+span {
   margin: 0;
+  line-height: 120%;
 }
 
 // custom classes
@@ -31,7 +56,7 @@ p {
   background: $grey-900;
   color: $white;
   cursor: pointer;
-  transition:all 0.2s ease;
+  transition: all 0.2s ease;
   &:hover {
     background-color: lighten($grey-900, 10%);
   }
@@ -54,4 +79,27 @@ p {
 
 .error-border {
   border: 1px solid $error;
+}
+
+
+// scrollbars
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #5a585a #0f0f0f;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 1px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #5a585a;
+  border-radius: 6px;
+  border: 1px solid #5a585a;
 }

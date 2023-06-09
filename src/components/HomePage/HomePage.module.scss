@@ -3,19 +3,22 @@
   display: grid;
   width: 100vw;
   min-height: 100vh;
-  grid-template-columns: 5.5fr 4.5fr;
+  grid-template-columns: 6fr 4fr;
 }
 
 .landing-wrapper {
-  //   background: radial-gradient(
-  //     79.84% 79.84% at 32.27% 80.27%,
-  //     rgba(31, 169, 17, 0.810119) 25.21%,
-  //     #2f15d0 54.58%,
-  //     $grey-900 100%
-  //   );
-  //   background-size: 100%;
-  //   background-position:right;
-  background-color: slateblue;
+    // background: radial-gradient(
+    //   79.84% 79.84% at 32.27% 80.27%,
+    //   rgba(31, 169, 17, 0.810119) 25.21%,
+    //   #2f15d0 54.58%,
+    //   $grey-900 100%
+    // );
+    // background-size: 100%;
+    // background-position:right;
+  background-color: $grey-900;
+  padding:$sp-xxxl $sp-xxl * 1.5;
+  padding-right: 0;
+  overflow-x: hidden;
 }
 
 .form-wrapper {

@@ -1,0 +1,33 @@
+@import "styles/variables";
+.container {
+    min-width:350px;
+    width:auto;
+    width:fit-content;
+    height:100px;
+    background-color: $white;
+    padding:$sp-xl;
+    color:$grey-900;
+    border-radius: $radius-xl;
+    margin-bottom: $sp-lg;
+    cursor: grab;
+}
+
+.header {
+    margin-bottom: $sp-lg;
+    h3 {
+        font-weight: bold;
+     }
+     display: flex;
+     align-items: center;
+     column-gap: $sp-sm;
+     p {
+        color:$grey-300;
+        font-size: 1.2rem;
+        line-height: 120%;
+     }
+}
+.content {
+    font-size: 1.4rem;
+    line-height: 120%;
+    font-weight: 500;
+}
