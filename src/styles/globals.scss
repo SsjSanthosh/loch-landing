@@ -3,13 +3,16 @@ body {
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 :root {
   font-size: 10px;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.9rem;
 }
 
 h2 {
@@ -49,6 +52,12 @@ span {
   width: 100%;
   input::placeholder {
     color: $grey-200;
+  }
+  &:hover {
+    border:1px solid $grey-900;
+  }
+  &:focus {
+    border: 1px solid $grey-900;
   }
 }
 
@@ -91,7 +100,7 @@ span {
 // helpers
 .error-text {
   color: $error;
-  font-size: 0.8rem;
+  font-size: 12px;
   margin-top: $sp-sm;
   font-weight: 500;
 }
@@ -108,23 +117,36 @@ input[type="checkbox"] {
 }
 
 // scrollbars
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #5a585a #0f0f0f;
-}
-
-/* Chrome, Edge, and Safari */
+/* Chrome, Edge and Safari */
 *::-webkit-scrollbar {
-  width: 1px;
+  display:none;
+}
+*::-webkit-scrollbar-track {
+  display:none;
 }
 
-*::-webkit-scrollbar-track {
-  background: #0f0f0f;
-}
 
 *::-webkit-scrollbar-thumb {
-  background-color: #5a585a;
-  border-radius: 6px;
-  border: 1px solid #5a585a;
+  display:none;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  display:none;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  display:none;
+}
+
+
+@media screen and (max-width: 1280px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  :root {
+    font-size: 8px;
+  }
 }

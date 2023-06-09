@@ -1,13 +1,9 @@
 import styles from "./LandingContent.module.scss";
 
 import BellIcon from "../../../public/images/bell_light.svg";
-import CohortImage from "../../../public/images/cohorts.png";
 import EyeIcon from "../../../public/images/eye.svg";
 
 import Image from "next/image";
-import { TESTIMONIALS } from "utils/constants";
-import TestimonialCard from "components/TestimonialCard";
-import { nanoid } from "nanoid";
 import TestimonialSection from "components/TestimonialSection";
 import NotificationCards from "components/NotificationCards";
 
@@ -33,7 +29,7 @@ const LandingContent = () => {
       {/* cohort section */}
       <section className={styles["cohorts-section"]}>
         <div className={styles["cohorts-section-image"]}>
-          <Image src={CohortImage} alt="Cohort groups" fill />
+          <img src="/images/cohorts.svg" alt="cohort groups" />
         </div>
         <div className={styles["cohorts-section-content"]}>
           <div className={styles["cohorts-section-icon"]}>

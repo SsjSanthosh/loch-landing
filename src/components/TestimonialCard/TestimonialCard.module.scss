@@ -3,7 +3,7 @@
     min-width:350px;
     width:auto;
     width:fit-content;
-    height:100px;
+    height:160px;
     background-color: $white;
     padding:$sp-xl;
     color:$grey-900;
@@ -30,4 +30,10 @@
     font-size: 1.4rem;
     line-height: 120%;
     font-weight: 500;
+}
+
+@media screen and (max-width: $tablet-sm) {
+    .container {
+        height:140px;
+    }
 }

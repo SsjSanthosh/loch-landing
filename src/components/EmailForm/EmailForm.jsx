@@ -19,26 +19,31 @@ const EmailForm = () => {
   };
   return (
     <div className={styles["container"]}>
-      <h1>Sign up for exclusive access.</h1>
       <form onSubmit={handleSubmit}>
-        <input
-          value={input}
-          onChange={(e) => {
-            setError(false);
-            setInput(e.target.value);
-          }}
-          placeholder="Your email address"
-          className={`custom-input ${styles["input"]} ${
-            error && `error-border`
-          }`}
-        />
-        {error && (
-          <p className="error-text">Please enter a valid email address.</p>
-        )}
+        <div className={styles["form-content"]}>
+          <h1>Sign up for exclusive access.</h1>
+          <div>
+            <input
+              value={input}
+              onChange={(e) => {
+                setError(false);
+                setInput(e.target.value);
+              }}
+              placeholder="Your email address"
+              className={`custom-input ${styles["input"]} ${
+                error && `error-border`
+              }`}
+            />
+            {error && (
+              <p className="error-text">Please enter a valid email address.</p>
+            )}
+          </div>
+          <button className={`custom-button-xl`} type="submit">
+            Get started
+          </button>
+        </div>
       </form>
-      <button className={`custom-button-xl`} type="submit">
-        Get started
-      </button>
+
       <p className={styles["form-info"]}>
         You’ll receive an email with an invite link to join.
       </p>

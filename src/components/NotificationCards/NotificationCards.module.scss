@@ -1,20 +1,28 @@
 @import "styles/variables";
 .container {
-    display: flex;
-    column-gap: $sp-xl;
+  display: flex;
+  column-gap: $sp-xl;
+  position: relative;
+  width: 1000px;
 }
-.cards{
+.cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: $sp-xl;
-  animation: loop 15s linear infinite;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.cards-1 {
+  animation: loop1 15s linear infinite;
 }
 .cards-2 {
-    animation-delay:15s;
+  animation: loop2 15s linear infinite;
 }
 .card {
   width: 250px;
-  height: 160px;
+  height: 180px;
   background-color: $white;
   border-radius: $radius-xl;
   padding: $sp-lg;
@@ -55,13 +63,19 @@
 }
 
 // custom card styles
+.card-one {
+  h4 {
+    margin-top: $sp-xl;
+  }
+}
 .card-two {
-  margin-top: $sp-xxxl;
+  margin-top: $sp-xxl;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   h5 {
     margin-bottom: $sp-md;
+
   }
 }
 
@@ -71,6 +85,11 @@
   flex-direction: column;
   justify-content: flex-end;
   row-gap: $sp-sm;
+}
+
+
+.pause-loop {
+  animation-play-state: paused;
 }
 // custom select
 .select {
@@ -124,11 +143,28 @@
 }
 
 // animations
-@keyframes loop {
+@keyframes loop1 {
   from {
-    transform: translateX(0);
+    left: 0%;
   }
   to {
-    transform: translateX(-100%);
+    left: -100%;
   }
+}
+
+@keyframes loop2 {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@media screen and (max-width: $tablet-sm) {
+  .card {
+    height: 120px;
+  } .card-two {
+    margin-top: $sp-xxl ;
+  } 
 }
